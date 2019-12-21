@@ -7,5 +7,7 @@ jdk:
 before_install:
 - chmod +x gradlew
 
+install: skip
+
 script:
 - ./gradlew jar
