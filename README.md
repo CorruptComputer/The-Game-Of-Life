@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/CorruptComputer/The-Game-Of-Life.svg?branch=master)](https://travis-ci.com/CorruptComputer/The-Game-Of-Life)
+
 ### The Game Of Life
 
 ### Building
