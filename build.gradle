@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'application'
+    id "org.sonarqube" version "3.1.1"
 }
 
 group 'xyz.gupton.nickolas.life'
@@ -12,8 +14,8 @@ jar {
 
     manifest {
         attributes 'Implementation-Title': 'The Game Of Life',
-                'Implementation-Version': project.version,
-                'Main-Class': 'xyz.gupton.nickolas.life.Main'
+                   'Implementation-Version': project.version,
+                   'Main-Class': 'xyz.gupton.nickolas.life.Main'
     }
 
     from {
@@ -23,10 +25,22 @@ jar {
     }
 }
 
+startScripts {
+    mainClassName 'xyz.gupton.nickolas.beepsky.Main'
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     // None
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "CorruptComputer_The-Game-Of-Life"
+    property "sonar.organization", "corruptcomputer"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
